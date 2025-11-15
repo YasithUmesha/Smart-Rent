@@ -1,4 +1,5 @@
 import { TrendingUp, Shield, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
     return (
@@ -20,12 +21,12 @@ export default function Hero() {
                     </div>
 
                     <div className="flex flex-wrap justify-center gap-4">
-                        <button className="px-8 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white rounded-lg font-medium hover:from-emerald-600 hover:to-cyan-600 transition-all shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/30">
+                        <Link to="/browse" className="px-8 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white rounded-lg font-medium hover:from-emerald-600 hover:to-cyan-600 transition-all shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/30">
                             Explore Categories
-                        </button>
-                        <button className="px-8 py-3 bg-neutral-900 text-white rounded-lg font-medium hover:bg-neutral-800 transition-all border border-neutral-800">
+                        </Link>
+                        <Link to="/list-item" className="px-8 py-3 bg-neutral-900 text-white rounded-lg font-medium hover:bg-neutral-800 transition-all border border-neutral-800">
                             List Your Item
-                        </button>
+                        </Link>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto pt-12">

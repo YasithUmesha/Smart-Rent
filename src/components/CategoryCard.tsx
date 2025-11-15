@@ -1,6 +1,8 @@
 import {type LucideIcon, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface CategoryCardProps {
+    id: string;
     title: string;
     description: string;
     icon: LucideIcon;
@@ -10,15 +12,16 @@ interface CategoryCardProps {
 }
 
 export default function CategoryCard({
-                                         title,
-                                         description,
-                                         icon: Icon,
-                                         itemCount,
-                                         gradient,
-                                         bgGradient,
-                                     }: CategoryCardProps) {
+    id,
+    title,
+    description,
+    icon: Icon,
+    itemCount,
+    gradient,
+    bgGradient,
+}   : CategoryCardProps) {
     return (
-        <div className="group relative">
+        <Link to={`/category/${id}`} className="group relative block">
             <div className={`absolute inset-0 bg-gradient-to-br ${bgGradient} rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
 
             <div className="relative bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-neutral-700 transition-all duration-300 overflow-hidden cursor-pointer">
@@ -49,6 +52,6 @@ export default function CategoryCard({
                     </div>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 }

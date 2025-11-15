@@ -1,5 +1,6 @@
 import { Search, Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
 interface HeaderProps {
@@ -18,7 +19,7 @@ export default function Header({ searchQuery, setSearchQuery }: HeaderProps) {
                     <div className="flex items-center justify-between h-20 sm:h-24 px-5 sm:px-8">
 
                         {/* Logo section */}
-                        <a href="#" className="flex items-center gap-3">
+                        <Link to="/" className="flex items-center gap-3">
                             <img
                                 src={logo}
                                 alt="SmartRent logo"
@@ -27,13 +28,13 @@ export default function Header({ searchQuery, setSearchQuery }: HeaderProps) {
                                 width={112}
                                 height={112}
                             />
-                        </a>
+                        </Link>
 
                         {/* Middle: Nav links (desktop) */}
                         <div className="hidden md:flex items-center gap-6">
-                            <a href="#" className="text-neutral-300 hover:text-white transition-colors text-lg font-medium">Browse</a>
-                            <a href="#" className="text-neutral-300 hover:text-white transition-colors text-lg font-medium">List Item</a>
-                            <a href="#" className="text-neutral-300 hover:text-white transition-colors text-lg font-medium">How it Works</a>
+                            <Link to="/browse" className="text-neutral-300 hover:text-white transition-colors text-lg font-medium">Browse</Link>
+                            <Link to="/list-item" className="text-neutral-300 hover:text-white transition-colors text-lg font-medium">List Item</Link>
+                            <Link to="/how-it-works" className="text-neutral-300 hover:text-white transition-colors text-lg font-medium">How it Works</Link>
                         </div>
 
                         {/* Right: Search + Actions (desktop) */}
@@ -49,13 +50,13 @@ export default function Header({ searchQuery, setSearchQuery }: HeaderProps) {
                                     className="w-64 bg-neutral-900 border border-neutral-800 rounded-lg pl-10 pr-4 py-2 text-sm text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-transparent transition-all"
                                 />
                             </div>
-                            <button
+                            <Link to="/signin"
                                 className="px-3 py-2 text-lg font-medium  text-neutral-300 hover:text-white transition-colors">
                                 Sign In
-                            </button>
-                            <button className="px-3 py-2 text-lg font-medium bg-transparent border border-[#4ECDC4] text-neutral-300 rounded-xl hover:bg-[#4ECDC4] hover:text-white transition-colors duration-300 ease-in-out">
+                            </Link>
+                            <Link to="/signup" className="px-3 py-2 text-lg font-medium bg-transparent border border-[#4ECDC4] text-neutral-300 rounded-xl hover:bg-[#4ECDC4] hover:text-white transition-colors duration-300 ease-in-out">
                                 Get Started
-                            </button>
+                            </Link>
 
 
                         </div>
@@ -86,16 +87,16 @@ export default function Header({ searchQuery, setSearchQuery }: HeaderProps) {
                                         className="w-full bg-neutral-900 border border-neutral-800 rounded-lg pl-10 pr-4 py-2 text-sm text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/50"
                                     />
                                 </div>
-                                <a href="#" className="text-neutral-300 hover:text-white transition-colors text-sm font-medium">Browse</a>
-                                <a href="#" className="text-neutral-300 hover:text-white transition-colors text-sm font-medium">List Item</a>
-                                <a href="#" className="text-neutral-300 hover:text-white transition-colors text-sm font-medium">How it Works</a>
+                                <Link to="/browse" className="text-neutral-300 hover:text-white transition-colors text-sm font-medium">Browse</Link>
+                                <Link to="/list-item" className="text-neutral-300 hover:text-white transition-colors text-sm font-medium">List Item</Link>
+                                <Link to="/how-it-works" className="text-neutral-300 hover:text-white transition-colors text-sm font-medium">How it Works</Link>
                                 <div className="flex gap-2 pt-2">
-                                    <button className="flex-1 px-4 py-2 text-sm font-medium text-neutral-300 hover:text-white transition-colors border border-neutral-800 rounded-lg">
+                                    <Link to="/signin" className="flex-1 px-4 py-2 text-sm font-medium text-neutral-300 hover:text-white transition-colors border border-neutral-800 rounded-lg text-center">
                                         Sign In
-                                    </button>
-                                    <button className="flex-1 px-4 py-2 text-sm font-medium bg-gradient-to-r from-emerald-500 to-cyan-500 text-white rounded-lg hover:from-emerald-600 hover:to-cyan-600 transition-all">
+                                    </Link>
+                                    <Link to="/signup" className="flex-1 px-4 py-2 text-sm font-medium bg-gradient-to-r from-emerald-500 to-cyan-500 text-white rounded-lg hover:from-emerald-600 hover:to-cyan-600 transition-all text-center">
                                         Get Started
-                                    </button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
