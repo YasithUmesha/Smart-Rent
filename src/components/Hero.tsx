@@ -1,9 +1,10 @@
 import { TrendingUp, Shield, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import './Hero.css';
 
 export default function Hero() {
     return (
-        <section className="relative overflow-hidden">
+        <section className="relative overflow-hidden hero-pattern">
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
                 <div className="text-center space-y-8">
@@ -14,7 +15,7 @@ export default function Hero() {
                 Anytime, Anywhere
               </span>
                         </h1>
-                        <p className="text-lg sm:text-xl text-neutral-400 max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-xl sm:text-xl text-neutral-400 max-w-2xl mx-auto leading-relaxed">
                             Explore rentals from music gear to sports tools and project essentials. Find what you need fast, rent anytime easily.
                         </p>
 
