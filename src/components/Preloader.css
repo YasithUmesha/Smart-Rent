@@ -3,7 +3,7 @@
     inset: 0;
     display: grid;
     place-items: center;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: #000;
     z-index: 9999;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .loader .circle {
-    --color: #333;
+    --color: #4ECDC4;
     --dim: 1.2rem;
     width: var(--dim);
     height: var(--dim);
