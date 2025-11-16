@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Browse from './pages/Browse';
 import CategoryDetail from './pages/CategoryDetail';
+import SearchResults from './pages/SearchResults';
 import ListItem from './pages/ListItem';
 import HowItWorks from './pages/HowItWorks';
 import SignIn from './pages/SignIn';
@@ -29,7 +30,8 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home searchQuery={searchQuery} />} />
                 <Route path="/browse" element={<Browse searchQuery={searchQuery} />} />
-                <Route path="/category/:categoryId" element={<CategoryDetail />} />
+                <Route path="/search" element={<SearchResults searchQuery={searchQuery} />} />
+                <Route path="/category/:categoryId" element={<CategoryDetail searchQuery={searchQuery} />} />
                 <Route path="/list-item" element={<ListItem />} />
                 <Route path="/how-it-works" element={<HowItWorks />} />
                 <Route path="/signin" element={<SignIn />} />

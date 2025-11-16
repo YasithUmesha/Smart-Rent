@@ -1,6 +1,6 @@
 import { Search, Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
 interface HeaderProps {
@@ -10,6 +10,13 @@ interface HeaderProps {
 
 export default function Header({ searchQuery, setSearchQuery }: HeaderProps) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const navigate = useNavigate();
+
+    const handleSearchKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Enter' && searchQuery.trim()) {
+            navigate('/search');
+        }
+    };
 
     return (
         <header className="sticky top-0 z-50 bg-transparent">
@@ -47,6 +54,7 @@ export default function Header({ searchQuery, setSearchQuery }: HeaderProps) {
                                     placeholder="Search items..."
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}
+                                    onKeyDown={handleSearchKeyDown}
                                     className="w-64 bg-neutral-900 border border-neutral-800 rounded-lg pl-10 pr-4 py-2 text-sm text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-transparent transition-all"
                                 />
                             </div>
@@ -84,6 +92,7 @@ export default function Header({ searchQuery, setSearchQuery }: HeaderProps) {
                                         placeholder="Search items..."
                                         value={searchQuery}
                                         onChange={(e) => setSearchQuery(e.target.value)}
+                                        onKeyDown={handleSearchKeyDown}
                                         className="w-full bg-neutral-900 border border-neutral-800 rounded-lg pl-10 pr-4 py-2 text-sm text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/50"
                                     />
                                 </div>
