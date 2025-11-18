@@ -44,10 +44,10 @@ export default function Header({ searchQuery, setSearchQuery }: HeaderProps) {
 
                         {/* Middle: Nav links (desktop) */}
                         <div className="hidden md:flex items-center gap-6">
-                            <Link to="/browse" onClick={handleLinkClick} className="text-neutral-300 hover:text-white transition-colors text-lg font-medium">Browse</Link>
-                            <Link to="/list-item" onClick={handleLinkClick} className="text-neutral-300 hover:text-white transition-colors text-lg font-medium">List Item</Link>
-                            <Link to="/how-it-works" onClick={handleLinkClick} className="text-neutral-300 hover:text-white transition-colors text-lg font-medium">How it Works</Link>
-                            <Link to="/contact" onClick={handleLinkClick} className="text-neutral-300 hover:text-white transition-colors text-lg font-medium">Contact Us</Link>
+                            <Link to="/browse" onClick={handleLinkClick} className="text-neutral-300 hover:text-white transition-colors text-md font-medium">Browse</Link>
+                            <Link to="/list-item" onClick={handleLinkClick} className="text-neutral-300 hover:text-white transition-colors text-md font-medium">List Item</Link>
+                            <Link to="/how-it-works" onClick={handleLinkClick} className="text-neutral-300 hover:text-white transition-colors text-md font-medium">How it Works</Link>
+                            <Link to="/contact" onClick={handleLinkClick} className="text-neutral-300 hover:text-white transition-colors text-md font-medium">Contact Us</Link>
                         </div>
 
                         {/* Right: Search + Actions (desktop) */}
