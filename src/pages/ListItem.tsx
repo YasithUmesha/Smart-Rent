@@ -7,7 +7,9 @@ export default function ListItem() {
                 <div className="space-y-8">
                     {/* Header */}
                     <div className="text-center space-y-4">
-                        <h1 className="text-4xl sm:text-5xl font-bold text-white">List Your Item</h1>
+                        <h1 className="text-5xl font-bold text-white mb-4">
+                            List Your <span className="bg-gradient-to-r from-white to-[#4ECDC4]  bg-clip-text text-transparent">Item</span>
+                        </h1>
                         <p className="text-lg text-neutral-400">
                             Start earning by renting out your items to others
                         </p>
